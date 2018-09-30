@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ 
+<html lang="es">
+ 
+<head>
+<title>Titulo de la web</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="estilos.css" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<link rel="alternate" title="Pozolería RSS" type="application/rss+xml" href="/feed.rss" />
+</head>
+ 
+<body>
+       <div id="map" style="height: 400px"></div>
+	<script type='text/javascript' >
+	var answers = ['yes','no','maybe'];
+	console.log(answers);
+	var names = ['David','Kristina',['Juan','Jose'],'Charlie','Angela'];
+	console.log(names);
+	console.log(names[2]);
+	names.pop();
+	console.log(names);
+
+	var programmer = { 'name':'David Walsh', 'url':'http://davidwalsh.name', 'girl':'Kristina'}
+	console.log(programmer.name);
+
+	var geo_str = {"type":"Feature", "properties":{}, "geometry":{"type":"LineString", "coordinates":[[-58.70379867498, -34.759088899009], [-58.371462249198, -34.654718781822]]}, "crs":{"type":"name", "properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}}};
+	console.log(geo_str);
+	console.log(typeof geo_str);
+	console.log(geo_str.geometry.coordinates[1]);
+
+	//Si es objeto, entrar por la key
+	obj_geom = geo_str.geometry;
+	console.log(obj_geom);
+
+	str = JSON.stringify(obj_geom);
+	console.log(str);
+
+
+</script>
+</body>
+</html>
